@@ -3,6 +3,8 @@ import express from 'express';
 import cors from 'cors';
 //solicitar informacion de la conexion de base de datos
 import dbConnection from '../database/config.js';
+//solicitar el arcivo coleccion de la carpeta routes
+import coleccion from '../routes/coleccion.js';
 //crear la clase de servidor
 class Server{
     constructor(){
@@ -29,7 +31,8 @@ class Server{
     }
     //metodos para las rutas 
     routes(){
-
+        //si alguien el front-end solicita esta ruta retornelo al arcivo coleccion de la carpeta routes
+        this.app.use('/api/coleccion',coleccion)
     }
     //metodo para iniciar el servidor
     listen(){
