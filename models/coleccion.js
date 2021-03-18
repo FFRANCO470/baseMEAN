@@ -8,3 +8,13 @@ const ColeccionShema = mongoose.Schema({
 })
 //exportar coleccion cuando sea requerida
 export default mongoose.model('Coleccion',ColeccionShema)
+
+// import {Schema, model} from 'mongoose';
+// const UserSchema = new Schema({
+//     name:{type:String, require:true},
+//     email:{type:String, require:true},
+//     password:{type:String, require:true}
+// },{
+//     timestamps:true
+// });
+// export default mongoose.model('User',UserSchema)
