@@ -4,7 +4,8 @@ import mongoose from 'mongoose';
 const dbConnection = async () =>{
     //si se establece la conexion con la base de datos
     try {
-        await mongoose.connect(process.env.MONGODB_CNX, {
+        //await mongoose.connect(process.env.MONGODB_CNX, {
+        await mongoose.connect(process.env.MONGO_LOCAL, {
             useNewUrlParser: true,
             useUnifiedTopology:true,
             useCreateIndex : true,
