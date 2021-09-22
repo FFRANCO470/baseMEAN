@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 //crear coleccion
 const ColeccionShema = mongoose.Schema({
-    campo1:{type:String, require:true, maxlength:50, unique:ture},
+    campo1:{type:String, require:true, maxlength:50, unique:true},
     campo2:{type:Number, default:1},
     createAt:{type:Date, default:Date.now}
 })

@@ -13,13 +13,13 @@ class Server{
         //servidor
         this.app = express();
         //conectar con base de datos
-        this.app = conectarDB();
+        this.conectarDB();
         //middlewares
-        this.app = middlewares();
+        this.middlewares();
         //rutas
-        this.app = routes();
+        this.routes();
     }
-    //metodo para conetar con base de datos
+    //metodo para conetar con base de datos 
     async conectarDB(){
         await dbConnection();
     }
@@ -31,7 +31,8 @@ class Server{
     }
     //metodos para las rutas 
     routes(){
-        //si alguien el front-end solicita esta ruta retornelo al arcivo coleccion de la carpeta routes
+        //si alguien el front-end solicita esta ruta retornelo
+        // al arcivo coleccion de la carpeta routes
         this.app.use('/api/coleccion',coleccion)
     }
     //metodo para iniciar el servidor
